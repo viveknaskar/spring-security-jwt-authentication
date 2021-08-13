@@ -1,0 +1,53 @@
+{
+	"variables": [],
+	"info": {
+		"name": "SpringSecurityJwt",
+		"_postman_id": "d849ac30-f932-3328-e9a7-a0b78b72ffac",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "JWT Token",
+			"request": {
+				"url": "http://localhost:8080/authenticate",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\" : \"admin\",\n\t\"password\" : \"secret\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Request + Jwt",
+			"request": {
+				"url": "http://localhost:8080/hello",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYyODkzMTY2NCwiaWF0IjoxNjI4ODk1NjY0fQ.ckFNKO1Wr__utRFeq3CgoHtN2Q5ZBkD3W5OR9sIXqKw",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
